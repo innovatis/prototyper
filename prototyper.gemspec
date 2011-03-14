@@ -6,14 +6,19 @@ Gem::Specification.new do |s|
   s.name        = "prototyper"
   s.version     = Prototyper::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Burke Libbey"]
+  s.email       = ["burke@burkelibbey.org"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Generates core stuff more easily}
+  s.description = %q{generators...}
 
-  s.rubyforge_project = "prototyper"
+  s.default_executable = "bin/prototyper"
 
+  s.add_dependency "ripl"
+  s.add_dependency "ripl-multi_line"
+  s.add_dependency "ripl-irb"
+  s.add_dependency "activesupport"
+  
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

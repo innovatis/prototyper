@@ -1,0 +1,2 @@
+#!/usr/bin/env ruby
+Ripl.start :binding => Prototyper::Scaffold.new.send(:eval,"binding")
