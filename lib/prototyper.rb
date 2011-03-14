@@ -4,9 +4,16 @@ require 'ripl'
 require 'ripl/multi_line'
 require 'ripl/irb'
 require 'active_support/all'
+require 'sinatra/base'
 
 module Prototyper
-   
+
+  class App < Sinatra::Base
+    get '/' do
+      "Hi."
+    end 
+  end 
+  
   class Scaffold
    
     include Prototyper::Generators

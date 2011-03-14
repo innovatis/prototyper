@@ -85,7 +85,7 @@ end
       end 
       puts ">> Writing Routes"
 
-      content = ["resources :#{table_name}\n"] 
+      content = ["  resources :#{table_name} do collection { get :datatables } end\n"] 
       
       routefile = File.readlines("config/routes.rb")
       newfile = routefile[0..0] + content + routefile[1..-1]
