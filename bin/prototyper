@@ -1,2 +1,4 @@
 #!/usr/bin/env ruby
+require 'ripl'
+require 'prototyper'
 Ripl.start :binding => Prototyper::Scaffold.new.send(:eval,"binding")
