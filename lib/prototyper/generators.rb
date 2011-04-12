@@ -74,7 +74,7 @@ end
 
     def generate_navigation
       puts ">> Writing Dashboard Nav"
-      c = "    %li= link_to '#{table_name.titleize}', #{table_name}_url, :class => \"exo-button #{current_if_path(/#{table_name}/)}\""
+      c = "    %li.exo-tab= link_to '#{table_name.titleize}', #{table_name}_url, :class => \"#{current_if_path(/#{table_name}/)}\""
       File.open('app/views/dashboard/_menu.html.haml', 'a') { |f| f.puts c }
     end 
 
