@@ -23,7 +23,7 @@ end
       puts ">> Writing Presenter into #{path}"
       File.open("#{path}/#{model_name.underscore.pluralize}_presenter.rb", "w") do |f|
         f.puts <<-CODE
-class #{namespaced_constant_name.pluralize}Presenter < InnoPresenter::CorePresenter
+class #{namespaced_constant_name.pluralize}Presenter < TablePresenter::Base
   # def items
   
   # def columns
